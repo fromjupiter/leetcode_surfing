@@ -6,7 +6,7 @@ package onehd;
  * DP:
  *  define table[i,j] as a bool indicating whether s[j:] matches p[i:].
  *  It will be easier to read if we use recursion.
- *  (the star case was over-complicated)
+ *
  */
 public class Regex_10 {
     public boolean isMatch(String s, String p) {
@@ -23,7 +23,6 @@ public class Regex_10 {
         if(sLen!=0 && '*'!=p.charAt(pLen-1)) {
             table[pLen-1][sLen-1] = isMatch(s.charAt(sLen-1), p.charAt(pLen-1));
         } else {
-            //table[pLen-2][sLen] = true;
             for(int j=sLen-1;j>=0;--j) {
                 if(isMatch(s.charAt(j),p.charAt(pLen-2))) {
                     table[pLen - 2][j] = true;
@@ -45,12 +44,7 @@ public class Regex_10 {
                 continue;
             }
             for(int j=sLen;j>=0;--j) {
-                //find the first non-match letter of p[i] after index j
-                int endIndex = j;
-                while(endIndex<sLen && isMatch(s.charAt(endIndex),p.charAt(i))) ++endIndex;
-                for(int k=j;k<=endIndex;++k) {
-                    table[i][j] = table[i][j] || table[i+2][k];
-                }
+                table[i][j] = table[i+2][j] || (j<sLen && isMatch(s.charAt(j),p.charAt(i)) && table[i][j+1]);
             }
         }
 

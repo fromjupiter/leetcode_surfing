@@ -11,10 +11,10 @@ public class Regex_10Test {
     @Test
     public void isMatchTest() throws Exception {
         Regex_10 test = new Regex_10();
+        assertEquals(true, test.isMatch("bbbba",".*a*a"));
         assertEquals(true, test.isMatch("a","ab*"));
         assertEquals(true, test.isMatch("","c*c*"));
         assertEquals(false, test.isMatch("","."));
-        assertEquals(true, test.isMatch("bbbba",".*a*a"));
         assertEquals(false, test.isMatch("aaa","ab*a"));
         assertEquals(true, test.isMatch("",".*"));
         assertEquals(false, test.isMatch("aaa","aa"));
