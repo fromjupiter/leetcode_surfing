@@ -1,0 +1,3 @@
+2019.9.15
+1. always think about edge cases first and put them in test code
+2. for DP problems, we can use guardian layer(init table as p[lenX+1][lenY+1]) to deal with edge cases
