@@ -17,6 +17,10 @@ public class LongestValidParentheses_32 {
      * Knowing this, we can store the index of last close delimiter, use a stack to find all open delimiter,
      * then we can find the longest one.
      *
+     * Leetcode Solution 4 explanation:
+     * For the left-right scan, it only considers ")" as delimiter,
+     * For the right-left scan, it only considers "(" as delimiter;
+     * By doing this, it doesn't need a stack to store the open brace indexes.
      */
     public int longestValidParentheses(String s) {
         int ans = 0;
