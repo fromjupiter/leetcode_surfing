@@ -1,3 +1,7 @@
 2019.9.15
 1. always think about edge cases first and put them in test code
 2. for DP problems, we can use guardian layer(init table as p[lenX+1][lenY+1]) to deal with edge cases
+
+2019.9.20
+1. For questions that involve using a stack, you can consider scanning the array twice,
+    one from left to right, the other from right to left.
