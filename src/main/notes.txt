@@ -5,3 +5,6 @@
 2019.9.20
 1. For questions that involve using a stack, you can consider scanning the array twice,
     one from left to right, the other from right to left.
+
+2019.9.23
+1. For array problems, you can always try to use chasing pointers.
