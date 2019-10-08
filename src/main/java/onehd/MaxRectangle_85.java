@@ -11,7 +11,7 @@ public class MaxRectangle_85 {
      *
      * But it turns out that it's slower than brute force solution :(
      */
-    public int maximalRectangle_v0(char[][] matrix) {
+    public int maximalRectangle(char[][] matrix) {
         if(matrix.length==0||matrix[0].length==0) return 0;
         int ans = 0;
         int[] heights = new int[matrix[0].length];
